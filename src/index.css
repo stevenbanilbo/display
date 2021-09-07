@@ -10,16 +10,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-#root{
-
+#root {
   height: 100%;
-
 }
 
 /* Layout */
 .grid-container {
-  display: grid; 
+  display: grid;
   grid-template-areas:
     'header'
     'main'
@@ -30,7 +27,7 @@ body {
 }
 header {
   grid-area: header;
-  background-color: #ececec;
+  background-color: seashell;
 }
 main {
   grid-area: main;
@@ -38,15 +35,53 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: lightslategray;
+  background-color: silver;
   color: #ffffff;
 }
 /* Common */
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
 a {
   text-decoration: none;
+  color: black;
 }
 a:hover {
   color: #ff8000;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+button {
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.7rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+button:hover {
+  border: 0.2rem #404040 solid;
+}
+button.primary {
+  background-color: #f0c040;
+}
+button.block {
+  width: 100%;
 }
 /* Header */
 header a {
@@ -67,6 +102,15 @@ a.brand {
 .row.center {
   justify-content: center;
 }
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  flex: 5 1 5rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
 
 /* Image */
 img {
@@ -76,10 +120,15 @@ img.medium {
   max-width: 29rem;
   width: 100%;
 }
+img.large {
+  margin: 5px;
+  width: 80%;
+  height: 50rem;
+}
 
 /* Card */
 .card {
-  border: 0.2rem #c0c0c0 solid;
+  border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
   border-radius: 0.5rem;
   margin: 1rem;
@@ -92,4 +141,19 @@ img.medium {
 }
 .price {
   font-size: 2rem;
+}
+/* Rating */
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: #404040;
+}
+/* Alert */
+.success {
+  color: #20a020;
+}
+.error {
+  color: #a02020;
 }
