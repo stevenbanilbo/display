@@ -21,6 +21,7 @@ function App() {
         </div>
       </header>
       <main>
+        {/* The  one that displays in use of routing */}
         <Route path="/product/:id" component={Productscreen}></Route>
         <Route path="/" component={Homescreen} exact></Route>
         
